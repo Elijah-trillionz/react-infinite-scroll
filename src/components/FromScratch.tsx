@@ -19,7 +19,7 @@ export const FromScratch = ({
     <div>
       <div className="products-list">
         {products.map((product, index) => (
-          <ProductCard product={product} key={index} />
+          <ProductCard product={product} key={product.id} />
         ))}
       </div>
       {loading && <p>Loading...</p>}

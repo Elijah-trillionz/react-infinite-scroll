@@ -16,11 +16,11 @@ const debounce = (func: (args: any) => void, delay: number) => {
 
 export const useInfiniteScroll = (fetchData: (page: number) => Promise<void>) => {
   const [page, setPage] = useState(1);
-  
+
   const handleScroll = debounce(() => {
     const bottom =
       Math.ceil(window.innerHeight + window.scrollY) >=
-      document.documentElement.scrollHeight - 200;
+      document.documentElement.scrollHeight - 300;
 
     if (bottom) {
       setPage((prevPage) => {

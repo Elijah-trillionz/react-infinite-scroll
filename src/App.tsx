@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { Ref, RefObject, useEffect, useRef, useState } from "react";
 import { ProductItem } from "./types";
 import { FromScratch } from "./components/FromScratch";
 import { WithReactScroll } from "./components/WithReactScroll";
 import { WithReactWindow } from "./components/WithReactWindow";
+import { WithIntersectionObserver } from "./components/WithIntersectionObserver";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -56,11 +57,17 @@ function App() {
         fetchData={fetchData}
         totalProducts={totalProducts}
       /> */}
-      <WithReactWindow
+      {/* <WithReactWindow
         products={products}
         fetchData={fetchData}
         totalProducts={totalProducts}
         loading={loading}
+      /> */}
+      <WithIntersectionObserver
+        products={products}
+        fetchData={fetchData}
+        loading={loading}
+        error={error}
       />
     </div>
   );

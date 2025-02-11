@@ -4,6 +4,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* .app-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 30px 0;
+} */
+
 .products-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -105,4 +112,19 @@
 
 .add-to-cart:hover {
   background-color: #45a049;
+}
+
+.to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #45a049;
+  border: none;
+  cursor: pointer;
 }
