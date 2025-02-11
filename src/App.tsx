@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ProductItem } from "./types";
 import { FromScratch } from "./components/FromScratch";
 import { WithReactScroll } from "./components/WithReactScroll";
+import { WithReactWindow } from "./components/WithReactWindow";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -50,10 +51,16 @@ function App() {
         loading={loading}
         error={error}
       /> */}
-      <WithReactScroll
+      {/* <WithReactScroll
         products={products}
         fetchData={fetchData}
         totalProducts={totalProducts}
+      /> */}
+      <WithReactWindow
+        products={products}
+        fetchData={fetchData}
+        totalProducts={totalProducts}
+        loading={loading}
       />
     </div>
   );
